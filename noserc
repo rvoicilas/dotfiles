@@ -1,0 +1,4 @@
+[nosetests]
+
+# pip install disabledoc for this to work
+disable-docstring = 1
