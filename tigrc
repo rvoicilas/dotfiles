@@ -1,0 +1,4 @@
+set show-date = relative
+set show-refs = yes
+set show-rev-graph = yes
+set line-graphics = yes
