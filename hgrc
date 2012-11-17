@@ -1,6 +1,7 @@
 [ui]
 username = Radu Voicilas <radu.voicilas@gmail.com>
 editor = vim
+ignore = ~/.hgignore
 
 [extensions]
 mq =
