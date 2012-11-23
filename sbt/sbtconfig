@@ -1,0 +1,1 @@
+SBT_OPTS="-XX:PermSize=256M -XX:MaxPermSize=512M"
