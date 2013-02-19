@@ -2,3 +2,7 @@
 
 # pip install disabledoc for this to work
 disable-docstring = 1
+
+# pip install git+git://github.com/bitprophet/rudolf.git
+# the pypi version doesn't work for me
+with-color = 1
