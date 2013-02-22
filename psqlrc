@@ -1,0 +1,8 @@
+\set PROMPT1 '%n@%M:%>%x %/# '
+
+\pset linestyle unicode
+\pset border 2
+\pset null ¤
+\pset format wrapped
+
+\timing
