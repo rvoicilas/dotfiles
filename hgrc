@@ -12,3 +12,7 @@ progress =
 
 [progress]
 delay = 1.0
+
+[diff]
+git = True
+unified = 5
