@@ -44,12 +44,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -57,10 +57,10 @@ fi
 function _rvm_prompt() {
     local gemset=$($HOME/.rvm/bin/rvm-prompt g)
     if [ ${#gemset} -eq 0 ]; then
-	echo ""
+    echo ""
     else
-	local version=$($HOME/.rvm/bin/rvm-prompt v)
-	echo " (${version}@${gemset:1})"
+    local version=$($HOME/.rvm/bin/rvm-prompt v)
+    echo " (${version}@${gemset:1})"
     fi
 }
 
@@ -124,3 +124,14 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export TERM="screen-256color"
 
 source /usr/local/bin/virtualenvwrapper.sh
+
+export PATH=$PATH:~/bin
+
+# add nodejs installation
+export PATH=$PATH:$HOME/.local_installs/nodejs/build/bin
+
+# add scala installation
+export PATH=$PATH:$HOME/.local_installs/scala/bin
+
+# add sbt path
+export PATH=$PATH:$HOME/.local_installs/sbt

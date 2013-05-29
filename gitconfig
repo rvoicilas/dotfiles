@@ -11,3 +11,5 @@
 
 [branch]
     autosetuprebase = always
+[core]
+	excludesfile = /home/raduv/.gitignore
