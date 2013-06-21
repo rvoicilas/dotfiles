@@ -135,3 +135,6 @@ export PATH=$PATH:$HOME/.local_installs/scala/bin
 
 # add sbt path
 export PATH=$PATH:$HOME/.local_installs/sbt
+
+# add golang path
+export PATH=$PATH:$HOME/.local_installs/go/bin
