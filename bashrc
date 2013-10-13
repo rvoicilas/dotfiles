@@ -136,10 +136,11 @@ export PATH=$PATH:$HOME/.local_installs/scala/bin
 # add sbt path
 export PATH=$PATH:$HOME/.local_installs/sbt
 
-# add golang path
-export PATH=$PATH:$HOME/.local_installs/go/bin
-
+# add golang paths
 export GOPATH=$HOME/.go
-
-# add gopath binary
+export PATH=$PATH:$HOME/.local_installs/go/bin
 export PATH=$PATH:$GOPATH/bin
+
+# add Android SDK to path
+export PATH=$PATH:$HOME/.local_installs/android/adt/sdk/tools
+export PATH=$PATH:$HOME/.local_installs/android/adt/sdk/platform-tools

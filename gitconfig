@@ -13,3 +13,5 @@
     autosetuprebase = always
 [core]
 	excludesfile = /home/raduv/.gitignore
+[grep]
+	extendedRegexp = true
