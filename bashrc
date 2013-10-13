@@ -138,3 +138,8 @@ export PATH=$PATH:$HOME/.local_installs/sbt
 
 # add golang path
 export PATH=$PATH:$HOME/.local_installs/go/bin
+
+export GOPATH=$HOME/.go
+
+# add gopath binary
+export PATH=$PATH:$GOPATH/bin
