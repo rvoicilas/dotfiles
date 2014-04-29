@@ -1,4 +1,6 @@
 \set PROMPT1 '%n@%M:%>%x %/# '
+\set HISTFILE ~/.psql/psql_history- :HOST - :DBNAME
+\set HISTSIZE 2000
 
 \pset linestyle unicode
 \pset border 2
@@ -14,3 +16,7 @@
 \set cache_hit_rate 'SELECT sum(heap_blks_read) as heap_read, sum(heap_blks_hit) as heap_hit, sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio FROM pg_statio_user_tables;'
 
 \set index_hit_rate 'SELECT relname, 100 * idx_scan / (seq_scan + idx_scan) percent_of_times_index_used, n_live_tup rows_in_table FROM pg_stat_user_tables WHERE seq_scan + idx_scan > 0 ORDER BY n_live_tup DESC;'
+
+\set uptime 'select now() - pg_postmaster_start_time() AS uptime;'
+
+\set dbsize 'SELECT datname, pg_size_pretty(pg_database_size(datname)) db_size FROM pg_database ORDER BY db_size;'
