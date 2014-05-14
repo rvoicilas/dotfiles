@@ -1,0 +1,11 @@
+# Icons stick to right side of tray
+icon_gravity E
+# Five icons wide, one high, 0 pixels from right, 0 from top
+geometry 5x1-0+0
+max_geometry 5x1-0+0
+# Black background
+background "#000000"
+skip_taskbar
+icon_size 12
+kludges force_icons_size
+window_strut none
