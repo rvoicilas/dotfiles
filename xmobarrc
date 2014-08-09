@@ -1,15 +1,20 @@
-Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
-       , bgColor = "black"
-       , fgColor = "grey"
-       , position = TopW L 85
-       , commands = [ Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
-                    , Run Cpu ["-L","15","-H","50","--normal","green","--high","red"] 10
-                    , Run Memory ["-t","Mem: %"] 10
-                    , Run Swap [] 10
-                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-                    , Run StdinReader
-                    ]
-       , sepChar = "%"
-       , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %wlan0% | %date%"
-       }
+-- xmobar config from: https://github.com/vicfryzel/xmonad-config/blob/master/xmobar.hs
+
+Config {
+    font = "xft:Fixed-8",
+    bgColor = "#000000",
+    fgColor = "#ffffff",
+    position = TopW L 96,
+    commands = [
+        Run Weather "LRBS" ["-t","<tempC>C","-L","64","-H","77","-n","#CEFFAC","-h","#FFB6B0","-l","#96CBFE"] 36000,
+        Run Cpu ["-L","15","-H","50","--normal","#FFFCC","--high","#FFB6B0","--low","#CEFFAC"] 10,
+        Run Memory ["-t","Mem: <usedratio>%","-H","8192","-L","4096","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
+        Run Swap ["-t","Swap: <usedratio>%","-H","1024","-L","512","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
+        Run Network "eth0" ["-t","Net: <rx>, <tx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
+        Run Date "%a %b %_d %k:%M" "date" 10,
+        Run StdinReader
+    ],
+    sepChar = "%",
+    alignSep = "}{",
+    template = "%StdinReader% }{ %cpu%   %memory%   %swap%   %eth0%   <fc=#FFFFCC>%date%</fc>   %LRBS%"
+}
