@@ -9,6 +9,9 @@ myManagementHooks = [
   resource =? "stalonetray" --> doIgnore
   ]
 
+xmobarTitleColor = "#FFB6B0"
+xmobarCurrentWorkspaceColor = "#CEFFAC"
+
 main = do
     xmproc <- spawnPipe "xmobar"
 
@@ -20,6 +23,8 @@ main = do
         , layoutHook = avoidStruts $ layoutHook defaultConfig
         , logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
-                        , ppTitle = xmobarColor "green" "" . shorten 50
+                        , ppTitle = xmobarColor xmobarTitleColor "" . shorten 100
+                        , ppCurrent = xmobarColor xmobarCurrentWorkspaceColor ""
+                        , ppSep = "    "
                         }
         }
