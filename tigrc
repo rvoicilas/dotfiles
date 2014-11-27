@@ -1,4 +1,8 @@
-set show-date = relative
-set show-refs = yes
-set show-rev-graph = yes
-set line-graphics = yes
+set ignore-case = true
+set line-graphics = utf-8
+set mouse = false
+set show-changes = true
+set vertical-split = false
+
+# Blame view
+set blame-view = date:default author:full file-name:auto id:yes,color line-number:yes,interval=1 text
