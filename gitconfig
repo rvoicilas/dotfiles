@@ -12,6 +12,8 @@
 [branch]
     autosetuprebase = always
 [core]
-	excludesfile = /home/raduv/.gitignore
+    excludesfile = /home/raduv/.gitignore
 [grep]
-	extendedRegexp = true
+    extendedRegexp = true
+[color]
+    ui = auto

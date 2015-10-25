@@ -27,27 +27,57 @@ set buffer_seconds=10
 set show_hidden=false
 set set_term_title=false
 
-# colors
-set color_cmdline_bg=default
-set color_cmdline_fg=cyan
+# colors zenburn (https://github.com/cmus/cmus/blob/master/data/zenburn.theme)
+
+# Directory colors
+set color_win_dir=108
+
+# Normal text
+set color_win_fg=188
+
+# Window background color.
+set color_win_bg=237
+
+# Command line color.
+set color_cmdline_bg=237
+set color_cmdline_fg=108
+
+# Color of error messages displayed on the command line.
 set color_error=lightred
-set color_info=lightyellow
-set color_separator=cyan
-set color_statusline_bg=default
-set color_statusline_fg=cyan
-set color_titleline_bg=blue
-set color_titleline_fg=white
-set color_win_bg=default
-set color_win_cur=green
-set color_win_cur_sel_bg=blue
-set color_win_cur_sel_fg=lightyellow
-set color_win_dir=lightblue
-set color_win_fg=cyan
-set color_win_inactive_cur_sel_bg=cyan
-set color_win_inactive_cur_sel_fg=black
-set color_win_inactive_sel_bg=gray
-set color_win_inactive_sel_fg=black
-set color_win_sel_bg=red
-set color_win_sel_fg=gray
-set color_win_title_bg=blue
-set color_win_title_fg=white
+
+# Color of informational messages displayed on the command line.
+set color_info=lightgreen
+
+# Color of the separator line between windows in view (1).
+set color_separator=246
+
+# Color of window titles (topmost line of the screen).
+set color_win_title_bg=235
+set color_win_title_fg=174
+
+# Status line color.
+set color_statusline_bg=237
+set color_statusline_fg=142
+
+# Color of currently playing track.
+set color_win_cur=172
+
+# Color of the line displaying currently playing track.
+set color_titleline_bg=235
+set color_titleline_fg=144
+
+# Color of the selected row which is also the currently playing track in active window.
+set color_win_cur_sel_bg=235
+set color_win_cur_sel_fg=223
+
+# Color of the selected row which is also the currently playing track in inactive window.
+set color_win_inactive_cur_sel_bg=238
+set color_win_inactive_cur_sel_fg=116
+
+# Color of selected row in active window.
+set color_win_sel_bg=235
+set color_win_sel_fg=223
+
+# Color of selected row in inactive window.
+set color_win_inactive_sel_bg=238
+set color_win_inactive_sel_fg=116
